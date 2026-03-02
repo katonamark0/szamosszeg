@@ -11,28 +11,30 @@
 
 
 //2. Készíts egy egyszerű számológép programot, amely két számot és egy műveletet kér be, majd kiírja az eredményt!
-let szam1 = parseFloat(prompt("Adj meg egy számot:"));
+let szam = parseFloat(prompt("Adj meg egy számot:"));
 let szam2 = parseFloat(prompt("Adj meg egy másik számot:"));
 let muvelet = prompt("Adj meg egy műveletet (+, -, *, /):");
 let eredmeny;
 switch (muvelet) {
     case "+":
-        eredmeny = szam1 + szam2;
+        eredmeny = szam + szam2;
         break;
     case "-":
-        eredmeny = szam1 - szam2;
+        eredmeny = szam - szam2;
         break;
     case "*":
-        eredmeny = szam1 * szam2;
+        eredmeny = szam * szam2;
         break;
     case "/":
         if (szam2 !== 0) {
-            eredmeny = szam1 / szam2;
+            console.log(eredmeny + szam / szam2);
         } else {
-            eredmeny = "Hiba: nullával való osztás!";
+           console.log(eredmeny + "Hiba: nullával való osztás!");
+            
         }
         break;
     default:
-        eredmeny = "Hiba: érvénytelen művelet!";
+        console.log(eredmeny + "Hiba: érvénytelen művelet!");
+        
 }
 console.log("Az eredmény: " + eredmeny);
